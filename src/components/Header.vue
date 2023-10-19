@@ -9,7 +9,7 @@ export default {
     <section class="top-bar">
       <nav class="container navbar navbar-expand-lg">
         <div class="container-fluid">
-          <div class="collapse navbar-collapse col-5 fw-bold" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse col-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,8 +93,17 @@ export default {
         </div>
       </nav>
     </section>
-    
-    <section class="jumbotron"></section>
+
+    <section class="jumbotron">
+      <div>
+        <img src="/public/home-3-hero-bg.jpg" alt="">
+      </div>
+      <div class="jumbo-text">
+        <h3 class="fw-bold">Commence Business</h3>
+        <h1>Distant Mentoring Program</h1>
+        <button>Download free guidebook <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
   </header>
 </template>
 
@@ -123,8 +132,27 @@ export default {
 }
 
 .jumbotron{
-  height: 670px;
-  border: 1px solid red;
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .jumbo-text{
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    button{
+      padding: 15px 35px;
+      border-radius: 5px;
+      border: none;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+  }
 }
 
 </style>
