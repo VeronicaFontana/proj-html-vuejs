@@ -103,6 +103,12 @@ export default {
         <h1>Distant Mentoring Program</h1>
         <button>Download free guidebook <i class="fa-solid fa-arrow-right"></i></button>
       </div>
+      <div class="icons d-flex flex-column">
+        <i class="fa-solid fa-ruler"></i>
+        <i class="fa-solid fa-life-ring"></i>
+        <i class="fa-solid fa-book"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
     </section>
   </header>
 </template>
@@ -151,6 +157,18 @@ export default {
       font-size: 0.7rem;
       font-weight: bold;
       color: $text-color;
+    }
+  }
+  .icons{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 98%;
+    top: 15%;
+
+    .fa-ruler, .fa-life-ring, .fa-book{
+      margin-bottom: 15px;
     }
   }
 }
