@@ -1,6 +1,17 @@
 <script>
+import TextBox from './partials/TextBox.vue';
+import { store } from '../data/store';
+
 export default {
-  name:"Main"
+  name:"Main",
+  data(){
+    return{
+      store
+    }
+  },
+  components:{
+    TextBox
+  }
 }
 </script>
 
@@ -8,23 +19,43 @@ export default {
   <main>
     <section class="container">
       <div class="component-box">
-        testo - foto  <!-- componente y -->
+        <div class="row">
+          <div class="col-5">
+            <TextBox v-for="(text, index) in store.texts.slice(0, 1)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
+          </div>
+          <div class="col-7"></div>
+        </div>
       </div>
       <div class="statistics">
         statistiche
       </div>
       <div class="component-box">
-        foto - testo  <!-- componente x -->
+        <div class="row">
+          <div class="col-7"></div>
+          <div class="col-5">
+            <TextBox v-for="(text, index) in store.texts.slice(1, 2)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
+          </div>
+        </div>
       </div>
       <div class="swipe">
         titolo
         swipe
       </div>
       <div class="component-box">
-        testo - foto  <!-- componente y -->
+        <div class="row">
+          <div class="col-5">
+            <TextBox v-for="(text, index) in store.texts.slice(2, 3)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
+          </div>
+          <div class="col-7"></div>
+        </div>
       </div>
       <div class="component-box">
-        foto - testo - button <!-- componente x -->
+        <div class="row">
+          <div class="col-7"></div>
+          <div class="col-5">
+            <TextBox v-for="(text, index) in store.texts.slice(3, 4)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
+          </div>
+        </div>
       </div>
       <div class="blogs">
         titolo
