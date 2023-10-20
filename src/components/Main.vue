@@ -17,13 +17,13 @@ export default {
 
 <template>
   <main>
-    <section class="container">
+    <section class="container px-3">
       <div class="component-box">
         <div class="row">
-          <div class="col-5">
+          <div class="col-4">
             <TextBox v-for="(text, index) in store.texts.slice(0, 1)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
           </div>
-          <div class="col-7"></div>
+          <div class="col-8"></div>
         </div>
       </div>
       <div class="statistics">
@@ -31,8 +31,8 @@ export default {
       </div>
       <div class="component-box">
         <div class="row">
-          <div class="col-7"></div>
-          <div class="col-5">
+          <div class="col-8"></div>
+          <div class="col-4">
             <TextBox v-for="(text, index) in store.texts.slice(1, 2)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
           </div>
         </div>
@@ -43,16 +43,16 @@ export default {
       </div>
       <div class="component-box">
         <div class="row">
-          <div class="col-5">
+          <div class="col-4">
             <TextBox v-for="(text, index) in store.texts.slice(2, 3)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
           </div>
-          <div class="col-7"></div>
+          <div class="col-8"></div>
         </div>
       </div>
       <div class="component-box">
         <div class="row">
-          <div class="col-7"></div>
-          <div class="col-5">
+          <div class="col-8"></div>
+          <div class="col-4">
             <TextBox v-for="(text, index) in store.texts.slice(3, 4)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
           </div>
         </div>
@@ -78,6 +78,13 @@ export default {
   .component-box{
     height: 450px;
     border: 1px solid black;
+    .row{
+      height: 100%;
+      .col-4{
+        display: flex;
+        align-items: center;
+      }
+    }
 
     }
   .statistics{
