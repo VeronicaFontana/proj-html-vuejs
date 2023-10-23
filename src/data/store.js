@@ -26,5 +26,28 @@ export const store = reactive({
       text:"As learners, people can enjoy great companionship from MaxCoach mentors and educators. We can help you develop and grow at your best.",
       link:"Get Free Guide"
     }
+  ],
+  blogs:[
+    {
+      role:"ARTIST",
+      name:"Brush Strokes Energize Trees in Paintings",
+      date:"May 15, 2020",
+      views:"688 views",
+      image: "/artist-blog-03-480x325.jpeg"
+    },
+    {
+      role:"ARTIST",
+      name:"Pocket-Sized Notebooks Hold Miniature Paintings",
+      date:"May 15, 2020",
+      views:"603 views",
+      image: "/artist-blog-01-480x325.jpg"
+    },
+    {
+      role:"ARTIST",
+      name:"Connection Between Self-Portraits and Identity",
+      date:"May 15, 2020",
+      views:"397 views",
+      image: "/artist-blog-02-480x325.jpg"
+    }
   ]
 })

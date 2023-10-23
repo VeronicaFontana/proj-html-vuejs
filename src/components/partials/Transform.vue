@@ -1,6 +1,6 @@
 <script>
 import { store } from '../../data/store';
-import TextBox from './TextBox.vue';
+import TextBox from './sections/TextBox.vue';
 
 export default {
   name:"Transform",

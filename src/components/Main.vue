@@ -1,10 +1,11 @@
 <script>
-import TextBox from './partials/TextBox.vue';
+import TextBox from './partials/sections/TextBox.vue';
 import { store } from '../data/store';
 import WorkCulture from './partials/WorkCulture.vue';
 import Skills from './partials/Skills.vue';
 import Transform from './partials/Transform.vue';
 import Statistics from './partials/Statistics.vue';
+import Blog from './partials/Blog.vue';
 
 export default {
   name:"Main",
@@ -18,7 +19,8 @@ export default {
     WorkCulture,
     Skills,
     Transform,
-    Statistics
+    Statistics,
+    Blog
   }
 }
 </script>
@@ -51,8 +53,7 @@ export default {
         <Transform />
       </div>
       <div class="blogs">
-        titolo
-        card
+        <Blog />
       </div>
       <div class="newsletter">
         newsletter
@@ -89,6 +90,7 @@ export default {
     border: 1px solid green;
   }
   .blogs{
+    margin-top: 160px;
     height: 550px;
     border: 1px solid orange;
   }
