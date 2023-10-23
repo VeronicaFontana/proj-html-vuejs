@@ -6,6 +6,7 @@ import Skills from './partials/Skills.vue';
 import Transform from './partials/Transform.vue';
 import Statistics from './partials/Statistics.vue';
 import Blog from './partials/Blog.vue';
+import Newsletter from './partials/Newsletter.vue';
 
 export default {
   name:"Main",
@@ -20,7 +21,8 @@ export default {
     Skills,
     Transform,
     Statistics,
-    Blog
+    Blog,
+    Newsletter
   }
 }
 </script>
@@ -56,7 +58,7 @@ export default {
         <Blog />
       </div>
       <div class="newsletter">
-        newsletter
+        <Newsletter />
       </div>
     </section>
   </main>
@@ -97,6 +99,9 @@ export default {
   .newsletter{
     height: 300px;
     border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
