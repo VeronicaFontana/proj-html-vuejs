@@ -42,7 +42,11 @@ export default {
       color: white;
       background-color: $text-color;
       padding: 10px 20px;
-      border: none;
+      &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: $text-color;
+      }
     }
     .form-control{
       padding: 10px 20px;

@@ -17,7 +17,7 @@ export default {
     <p class="section">{{ section }}</p>
     <h2>{{ title }}</h2>
     <p class="text">{{ text }}</p>
-    <p class="text">{{ link }}</p>
+    <p class="text"><strong>{{ link }} <i class="fa-solid fa-arrow-right"></i></strong></p>
   </div>
 </template>
 

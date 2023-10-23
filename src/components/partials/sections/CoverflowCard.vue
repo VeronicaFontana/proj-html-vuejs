@@ -28,6 +28,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../../scss/partials/variables" as *;
 .card{
   max-height: 300px;
   padding: 30px;
@@ -36,6 +37,13 @@ export default {
   }
   p{
     font-size: .8rem;
+  }
+  &:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.563);
+    cursor: pointer;
+    h5{
+      color: $text-color;
+    }
   }
   .testimonial{
     display: flex;

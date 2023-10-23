@@ -37,19 +37,19 @@
     class="mySwiper"
   >
     <swiper-slide>
-      <SwiperCard v-for="(course, index) in store.courses.slice(0,1)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+      <SwiperCard v-for="(course, index) in store.courses.slice(0,1)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" :free="course.free" />
     </swiper-slide>
     <swiper-slide>
-      <SwiperCard v-for="(course, index) in store.courses.slice(1,2)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+      <SwiperCard v-for="(course, index) in store.courses.slice(1,2)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" :free="course.free" />
     </swiper-slide>
     <swiper-slide>
-      <SwiperCard v-for="(course, index) in store.courses.slice(2,3)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+      <SwiperCard v-for="(course, index) in store.courses.slice(2,3)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" :free="course.free" />
     </swiper-slide>
     <swiper-slide>
-      <SwiperCard v-for="(course, index) in store.courses.slice(3,4)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+      <SwiperCard v-for="(course, index) in store.courses.slice(3,4)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" :free="course.free" />
     </swiper-slide>
     <swiper-slide>
-      <SwiperCard v-for="(course, index) in store.courses.slice(4,5)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+      <SwiperCard v-for="(course, index) in store.courses.slice(4,5)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" :free="course.free" />
     </swiper-slide>
   </swiper>
 </template>
@@ -57,10 +57,10 @@
 
 
 <style lang="scss" scoped>
-.swiper {
+.swiper{
   width: 100%;
   height: 100%;
-  .swiper-slide {
+  .swiper-slide{
     text-align: center;
     font-size: 18px;
     background: #fff;

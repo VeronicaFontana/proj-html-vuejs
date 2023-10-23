@@ -52,6 +52,7 @@ export const store = reactive({
   ],
   courses:[
     {
+      free: false,
       price: "$40.00",
       name:"Learning to Write as a Professional Author",
       lessonNum: 20,
@@ -59,6 +60,7 @@ export const store = reactive({
       image:"/course-02-480x298.jpg"
     },
     {
+      free: true,
       price: "$0.00",
       name:"Customer-centric Info-Tech Strategies",
       lessonNum: 24,
@@ -66,6 +68,7 @@ export const store = reactive({
       image:"/stock-full-hd-03-480x298.jpg"
     },
     {
+      free: false,
       price: "$19.00",
       name:"Open Programming Courses for Everyone: Python",
       lessonNum: 17,
@@ -73,6 +76,7 @@ export const store = reactive({
       image:"/stock-full-hd-04-480x298.jpg"
     },
     {
+      free: false,
       price: "$26.00",
       name:"Academic Listening and Note-taking",
       lessonNum: 14,
@@ -80,6 +84,7 @@ export const store = reactive({
       image:"/public/stock-full-hd-06-480x298.jpg"
     },
     {
+      free: true,
       price: "$0.00",
       name:"Personal Finance: Financial Security Thinking & Principles",
       lessonNum: 2,

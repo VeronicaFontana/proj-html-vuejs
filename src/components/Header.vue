@@ -19,7 +19,12 @@ export default {
             <img src="../../public/dark-logo.png" alt="">
           </div>
           <div class="search d-flex align-items-center justify-content-end  col-4">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="shopping">
+              <div class="number-cart">
+                0
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
             <i class="fa-regular fa-circle-user"></i>
             <form class="d-flex" role="search">
               <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
@@ -32,7 +37,7 @@ export default {
 
     <section class="jumbotron">
       <div>
-        <img src="/public/home-3-hero-bg.jpg" alt="">
+        <img src="/home-3-hero-bg.jpg" alt="">
       </div>
       <div class="jumbo-text">
         <h3 class="fw-bold">Commence Business</h3>
@@ -51,6 +56,7 @@ export default {
 
 <style lang="scss" scoped> 
 @use "../scss/partials/variables" as *;
+
 .top-bar{
   display: flex;
   height: 80px;
@@ -58,12 +64,32 @@ export default {
 
   .container{
     max-width: 1230px;
-
+    .shopping{
+      position: relative;
+      .number-cart{
+        position: absolute;
+        left: 70%;
+        top: 0;
+        background-color: $text-color;
+        color: white;
+        border-radius: 50%;
+        padding: 0 3px;
+        font-size: 0.5rem;
+      }
+    }
     .logo{
       img{
         width: 50%;
         height: 50%;
       }
+    }
+    .form-control{
+      background-color: $footer-text;
+    }
+
+    .input-group-text{
+      border: none;
+      color: $text-color;
     }
     .search{
       .fa-regular{
@@ -93,6 +119,10 @@ export default {
       font-size: 0.7rem;
       font-weight: bold;
       color: $text-color;
+      &:hover{
+        color: white;
+        background-color: $text-color;
+      }
     }
   }
   .icons{
@@ -102,9 +132,13 @@ export default {
     position: absolute;
     left: 98%;
     top: 15%;
+    &:hover{
+      cursor: pointer;
+    }
 
     .fa-ruler, .fa-life-ring, .fa-book{
       margin-bottom: 15px;
+      
     }
   }
 }

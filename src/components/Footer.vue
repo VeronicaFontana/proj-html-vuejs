@@ -90,6 +90,10 @@ footer{
       i{
         margin: 0 10px;
         color: $role-color;
+        &:hover{
+          cursor: pointer;
+          color: $text-color;
+        }
       }
     }
   }
@@ -110,6 +114,12 @@ footer{
         padding: 0;
         list-style: none;
         line-height: 30px;
+        li{
+          &:hover{
+            cursor: pointer;
+            color: $text-color;
+          }
+        }
       }
     }
   }

@@ -6,13 +6,17 @@
       name: String,
       lessonNum: Number,
       studentNum: Number,
-      image: String
+      image: String,
+      free: Boolean
     }
   };
 </script>
 
 <template>
     <div class="card" style="width: 18rem;">
+      <div class="free" v-if="free">
+        <span>FREE</span>
+      </div>
       <img :src="image" class="card-img-top" alt="...">
       <div class="card-body">
         <span class="price">{{ price }}</span>
@@ -27,6 +31,27 @@
 
 <style lang="scss" scoped>
 @use "../../../scss/partials/variables" as *;
+
+.card{
+  position: relative;
+  border: none;
+  &:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.563);
+    cursor: pointer;
+    h5{
+      color: $text-color;
+    }
+  }
+  .free{
+    right:0;
+    position: absolute;
+    background-color: #EE7455;
+    width: 40px;
+    font-size: .8rem;
+    color: white;
+    font-weight: bold;
+  }
+}
 .card-body{
   text-align: start;
   h5{

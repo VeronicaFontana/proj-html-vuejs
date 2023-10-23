@@ -29,6 +29,14 @@ export default {
 @use "../../../scss/partials/variables" as *;
 
 .col-4{
+  border-radius: 5px;
+  &:hover{
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.563);
+      cursor: pointer;
+      h5{
+        color: $text-color;
+      }
+    }
   img{
     border-radius: 5px;
   }

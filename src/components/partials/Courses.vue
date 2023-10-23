@@ -22,6 +22,9 @@ export default {
     <div class="row p-0">
       <Swiper />
     </div>
+    <div class="bottom-text">
+      <span>Control your professional preference settings to get notified about appropriate courses. <strong>View all courses <i class="fa-solid fa-arrow-right"></i></strong></span>
+    </div>
   </div>
 </template>
 
@@ -41,5 +44,14 @@ div{
       color: $text-color;
     }
   }
+  .bottom-text{
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    span{
+      font-size: .8rem;
+    }
+  }
+  
 }
 </style>

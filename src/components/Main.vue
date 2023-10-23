@@ -33,19 +33,24 @@ export default {
 
 <template>
   <main>
+    <section class="up">
+      <section class="container px-3">
+        <div class="component-box">
+          <WorkCulture />
+        </div>
+        <div class="statistics">
+          <Statistics />
+        </div>
+        <div class="component-box">
+          <Skills />
+        </div>
+        <div class="swipe">
+          <Courses />
+        </div>
+      </section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="100" width="100vw" fill="white"><path class="elementor-shape-fill" d="M0 0v100h100V0Q50 200 0 0"/></svg>
+    </section>
     <section class="container px-3">
-      <div class="component-box">
-        <WorkCulture />
-      </div>
-      <div class="statistics">
-        <Statistics />
-      </div>
-      <div class="component-box">
-        <Skills />
-      </div>
-      <div class="swipe">
-        <Courses />
-      </div>
       <div class="component-box">
         <div class="row d-flex align-items-center">
           <div class="col-4">
@@ -59,9 +64,9 @@ export default {
       <div class="component-box">
         <Transform />
       </div>
-      <div class="blogs">
-        <Blog />
-      </div>
+        <div class="blogs">
+          <Blog />
+        </div>
       <div class="newsletter">
         <Newsletter />
       </div>
@@ -72,6 +77,10 @@ export default {
 <style lang="scss" scoped> 
 @use "../scss/partials/variables" as *;
 
+.up{
+  background-image: linear-gradient(white,#F5F5F5);
+}
+    
 .container{
   margin-top: 75px;
   max-width: 980px;
@@ -94,15 +103,18 @@ export default {
     height: 550px;
   }
   .blogs{
-    margin-top: 160px;
+    padding: 150px 0;
     height: 550px;
   }
+
   .newsletter{
+    margin: 100px 0;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  
 }
 
 </style>
