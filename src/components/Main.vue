@@ -8,6 +8,7 @@ import Statistics from './partials/Statistics.vue';
 import Blog from './partials/Blog.vue';
 import Newsletter from './partials/Newsletter.vue';
 import Courses from './partials/Courses.vue';
+import Coverflow from './partials/sections/Coverflow.vue';
 
 export default {
   name:"Main",
@@ -24,7 +25,8 @@ export default {
     Statistics,
     Blog,
     Newsletter,
-    Courses
+    Courses,
+    Coverflow
   }
 }
 </script>
@@ -45,11 +47,13 @@ export default {
         <Courses />
       </div>
       <div class="component-box">
-        <div class="row">
+        <div class="row d-flex align-items-center">
           <div class="col-4">
             <TextBox v-for="(text, index) in store.texts.slice(2, 3)" :key="index" :section="text.section" :title="text.title" :text="text.text" :link="text.link" />
           </div>
-          <div class="col-8"></div>
+          <div class="col-8">
+            <Coverflow />
+          </div>
         </div>
       </div>
       <div class="component-box">
@@ -74,7 +78,6 @@ export default {
 
   .component-box{
     height: 450px;
-    border: 1px solid black;
     .row{
       height: 100%;
       position: relative;
@@ -86,20 +89,16 @@ export default {
   }
   .statistics{
     height: 250px;
-    border: 1px solid red;
   }
   .swipe{
     height: 550px;
-    border: 1px solid green;
   }
   .blogs{
     margin-top: 160px;
     height: 550px;
-    border: 1px solid orange;
   }
   .newsletter{
     height: 300px;
-    border: 1px solid blue;
     display: flex;
     align-items: center;
     justify-content: center;

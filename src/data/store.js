@@ -53,7 +53,7 @@ export const store = reactive({
   courses:[
     {
       price: "$40.00",
-      name:"Learning to Write as a Professiona Author",
+      name:"Learning to Write as a Professional Author",
       lessonNum: 20,
       studentNum: 50,
       image:"/course-02-480x298.jpg"
@@ -85,6 +85,29 @@ export const store = reactive({
       lessonNum: 2,
       studentNum: 283,
       image:"/public/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg"
+    }
+  ],
+  testimonials:[
+    {
+      resume: "Professional team of specialists and passionate mentors at reach",
+      text:"I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.",
+      name:"MADLEY PONDOR",
+      role:"/ IT Specialist",
+      image:"/testimonial-avata-01.jpg"
+    },
+    {
+      resume: "High level of efficiency and scientific teaching methods",
+      text:"I am free to learn at my own pace, follow my own schedule and choose the subject i want to learn from the syllabus. Great study portal fo people like me.",
+      name:"MINA HOLLACE",
+      role:"/ Freelancer",
+      image:"/testimonial-avata-02.jpg"
+    },
+    {
+      resume: "The MaxCoach team works really hard to ensure high level of quality",
+      text:"I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt.",
+      name:"LUVIC DUBBLE",
+      role:"/ Private Tutor",
+      image:"/testimonial-avata-03.jpg"
     }
   ]
 })
