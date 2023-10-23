@@ -7,6 +7,7 @@ import Transform from './partials/Transform.vue';
 import Statistics from './partials/Statistics.vue';
 import Blog from './partials/Blog.vue';
 import Newsletter from './partials/Newsletter.vue';
+import Courses from './partials/Courses.vue';
 
 export default {
   name:"Main",
@@ -22,7 +23,8 @@ export default {
     Transform,
     Statistics,
     Blog,
-    Newsletter
+    Newsletter,
+    Courses
   }
 }
 </script>
@@ -40,8 +42,7 @@ export default {
         <Skills />
       </div>
       <div class="swipe">
-        titolo
-        swipe
+        <Courses />
       </div>
       <div class="component-box">
         <div class="row">

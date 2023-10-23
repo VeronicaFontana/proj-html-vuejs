@@ -93,7 +93,6 @@ footer{
       }
     }
   }
-  
   span{
     font-weight: bold;
   }

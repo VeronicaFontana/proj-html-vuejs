@@ -23,7 +23,6 @@ export default {
       <CardBlog v-for="(blog, index) in store.blogs" :key="index" :role="blog.role" :name="blog.name" :date="blog.date" :views="blog.views" :image="blog.image" />
     </div>
   </div>
-  
 </template>
 
 <style lang="scss" scoped>
