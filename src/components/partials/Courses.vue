@@ -1,8 +1,14 @@
 <script>
 import Swiper from './sections/Swiper.vue';
+import { store } from '../../data/store';
 
 export default {
   name:"Courses",
+  data(){
+    return{
+      store
+    }
+  },
   components:{
     Swiper
   }
@@ -12,8 +18,8 @@ export default {
 <template>
   <div>
     <p>Join MaxCoach at best</p>
-    <h1><strong>Latest Online</strong> <span>Courses</span></h1>
-    <div class="row">
+    <h1 class="mb-0"><strong>Latest Online</strong> <span>Courses</span></h1>
+    <div class="row p-0">
       <Swiper />
     </div>
   </div>

@@ -49,5 +49,42 @@ export const store = reactive({
       views:"397 views",
       image: "/artist-blog-02-480x325.jpg"
     }
+  ],
+  courses:[
+    {
+      price: "$40.00",
+      name:"Learning to Write as a Professiona Author",
+      lessonNum: 20,
+      studentNum: 50,
+      image:"/course-02-480x298.jpg"
+    },
+    {
+      price: "$0.00",
+      name:"Customer-centric Info-Tech Strategies",
+      lessonNum: 24,
+      studentNum: 769,
+      image:"/stock-full-hd-03-480x298.jpg"
+    },
+    {
+      price: "$19.00",
+      name:"Open Programming Courses for Everyone: Python",
+      lessonNum: 17,
+      studentNum: 62,
+      image:"/stock-full-hd-04-480x298.jpg"
+    },
+    {
+      price: "$26.00",
+      name:"Academic Listening and Note-taking",
+      lessonNum: 14,
+      studentNum: 68,
+      image:"/public/stock-full-hd-06-480x298.jpg"
+    },
+    {
+      price: "$0.00",
+      name:"Personal Finance: Financial Security Thinking & Principles",
+      lessonNum: 2,
+      studentNum: 283,
+      image:"/public/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg"
+    }
   ]
 })

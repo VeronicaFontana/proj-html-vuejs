@@ -1,14 +1,22 @@
 <script>
   // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-
+  import { Swiper, SwiperSlide} from 'swiper/vue';
   // import required modules
   import { Pagination } from 'swiper/modules';
 
+  import SwiperCard from './SwiperCard.vue';
+  import { store } from '../../../data/store';
+
   export default {
+    data(){
+      return{
+        store
+      }
+    },
     components: {
       Swiper,
-      SwiperSlide,
+      SwiperCard,
+      SwiperSlide
     },
     setup() {
       return {
@@ -28,32 +36,37 @@
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>
+      <SwiperCard v-for="(course, index) in store.courses.slice(0,1)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+    </swiper-slide>
+    <swiper-slide>
+      <SwiperCard v-for="(course, index) in store.courses.slice(1,2)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+    </swiper-slide>
+    <swiper-slide>
+      <SwiperCard v-for="(course, index) in store.courses.slice(2,3)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+    </swiper-slide>
+    <swiper-slide>
+      <SwiperCard v-for="(course, index) in store.courses.slice(3,4)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+    </swiper-slide>
+    <swiper-slide>
+      <SwiperCard v-for="(course, index) in store.courses.slice(4,5)" :key="index" :price="course.price" :name="course.name" :lessonNum="course.lessonNum" :studentNum="course.studentNum" :image="course.image" />
+    </swiper-slide>
   </swiper>
 </template>
 
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 .swiper {
   width: 100%;
   height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>
