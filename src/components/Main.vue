@@ -4,6 +4,7 @@ import { store } from '../data/store';
 import WorkCulture from './partials/WorkCulture.vue';
 import Skills from './partials/Skills.vue';
 import Transform from './partials/Transform.vue';
+import Statistics from './partials/Statistics.vue';
 
 export default {
   name:"Main",
@@ -16,7 +17,8 @@ export default {
     TextBox,
     WorkCulture,
     Skills,
-    Transform
+    Transform,
+    Statistics
   }
 }
 </script>
@@ -28,7 +30,7 @@ export default {
         <WorkCulture />
       </div>
       <div class="statistics">
-        statistiche
+        <Statistics />
       </div>
       <div class="component-box">
         <Skills />
