@@ -3,7 +3,9 @@ export default {
   name: "Statistics",
   data(){
     return{
-      enrolled:""
+      enrolled:"",
+      satisfaction:"",
+      sessions:""
     }
   },
   methods:{
@@ -17,10 +19,34 @@ export default {
           clearInterval(interval);
         }
       },0.5);
+    },
+    sessionsCounter(){
+      let count = 1000;
+      const interval = setInterval(()=>{
+        if(count < 1926) {
+          count++;
+          this.sessions = count;
+        }else{
+          clearInterval(interval);
+        }
+      },5);
+    },
+    satisfactionCounter(){
+      let count = 0;
+      const interval = setInterval(()=>{
+        if(count < 100) {
+          count++;
+          this.satisfaction = count;
+        }else{
+          clearInterval(interval);
+        }
+      },50);
     }
   },
   mounted(){
     this.enrolledCounter();
+    this.sessionsCounter();
+    this.satisfactionCounter();
   }
 }
 </script>
@@ -29,19 +55,19 @@ export default {
   <div class="row">
     <div class="col-5">
       <div class="counter">
-      <span>Numero: {{ this.enrolled }}</span>
+        <span>{{ enrolled }}</span>
       </div>
       <span>Enrolled Learners</span>
     </div>
     <div class="col-2">
       <div class="counter">
-
+        <span>{{ sessions }}</span>
       </div>
       <span>Finished sessions</span>
     </div>
     <div class="col-5">
       <div class="counter">
-
+        <span>{{ satisfaction }}</span>
       </div>
       <span>Satisfaction rate</span>
     </div>
