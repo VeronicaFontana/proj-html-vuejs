@@ -53,27 +53,49 @@ export default {
 
 <template>
   <div class="row">
-    <div class="col-5">
+    <div class="col-4 enroll">
       <div class="counter">
-        <span>{{ enrolled }}</span>
+        <span>{{ enrolled }}+</span>
       </div>
-      <span>Enrolled Learners</span>
+      <span class="text">Enrolled Learners</span>
     </div>
-    <div class="col-2">
+    <div class="col sessions">
       <div class="counter">
         <span>{{ sessions }}</span>
       </div>
-      <span>Finished sessions</span>
+      <span class="text">Finished sessions</span>
     </div>
-    <div class="col-5">
+    <div class="col-4 satisfaction">
       <div class="counter">
-        <span>{{ satisfaction }}</span>
+        <span>{{ satisfaction }}%</span>
       </div>
-      <span>Satisfaction rate</span>
+      <span class="text">Satisfaction rate</span>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../../scss/partials/variables" as *;
+.row{
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
+  .text{
+    text-transform: uppercase;
+  }
+
+  .counter{
+    span{
+      color: $text-color;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+
+  
+}
 </style>
